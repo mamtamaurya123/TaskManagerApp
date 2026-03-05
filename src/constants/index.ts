@@ -3,7 +3,6 @@ export const STORAGE_KEYS = {
   USER: "@TaskManager:user",
 } as const;
 
-
 export const CONSTANTS_DATA = {
   TASKSFLOW: "TaskFlow",
   MyTasks: "My Tasks",
