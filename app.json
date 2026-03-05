@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "TaskFlow",
+    "slug": "taskmanagerapp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.taskmanagerapp.app"
+    },
+    "android": {
+      "package": "com.taskmanagerapp.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#6C63FF"
+      },
+      "permissions": []
+    },
+    "plugins": [
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "minSdkVersion": 23
+          }
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "6d8a81bf-4a40-45fb-8568-850805b05736"
+      }
+    }
+  }
+}
