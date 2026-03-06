@@ -40,7 +40,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   }, []);
 
   const login = useCallback(async (username: string, password: string) => {
-    await new Promise((r) => setTimeout(r, 800)); // simulate network
+    await new Promise((r) => setTimeout(r, 800)); 
     if (
       username.trim() === DUMMY_CREDENTIALS.username &&
       password === DUMMY_CREDENTIALS.password

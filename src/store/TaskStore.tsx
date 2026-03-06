@@ -75,7 +75,6 @@ const taskReducer = (state: TaskState, action: TaskAction): TaskState => {
   }
 };
 
-//Context
 interface TaskContextType {
   state: TaskState;
   addTask: (
@@ -91,7 +90,6 @@ interface TaskContextType {
 
 const TaskContext = createContext<TaskContextType | null>(null);
 
-// Provider
 export const TaskProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(taskReducer, initialState);
 
@@ -104,7 +102,7 @@ export const TaskProvider = ({ children }: { children: ReactNode }) => {
     })();
   }, []);
 
-  // Persist on change
+  // on change
   useEffect(() => {
     if (!state.isLoading) {
       StorageService.set(STORAGE_KEYS.TASKS, state.tasks);

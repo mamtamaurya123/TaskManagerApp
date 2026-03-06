@@ -18,6 +18,7 @@ import {
   TaskStackParamList,
 } from "../types";
 import { COLORS, CONSTANTS_DATA, FONT_SIZES, FONT_WEIGHT } from "../constants";
+import Icons from "../Icons/Icons";
 
 const RootStack = createStackNavigator<RootStackParamList>();
 const MainTab = createBottomTabNavigator<MainTabParamList>();
@@ -104,14 +105,15 @@ const MainNavigator: React.FC = () => (
   </MainTab.Navigator>
 );
 
-// Root + Auth Gate
+// Root + Auth
 const AppNavigator: React.FC = () => {
   const { isAuthenticated, isLoading } = useAuth();
 
   if (isLoading) {
     return (
       <View style={styles.splash}>
-        <Text style={styles.splashEmoji}>✅</Text>
+        {/* <Text style={styles.splashEmoji}>✅</Text> */}
+         <Icons.TaskDone size={30} color={COLORS.success} />
         <Text style={styles.splashTitle}>{CONSTANTS_DATA.TASKSFLOW}</Text>
         <ActivityIndicator color={COLORS.card} style={{ marginTop: 24 }} />
       </View>

@@ -120,7 +120,7 @@ const TaskDetailScreen: React.FC = () => {
         )}
       </Card>
 
-      {/* Meta Card */}
+      {/* Card */}
       <Card style={styles.metaCard}>
         <Text style={styles.sectionLabel}>DETAILS</Text>
         {metaRows.map(({ icon, label, value }) => (
@@ -178,7 +178,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginBottom: SPACING.md,
   },
-  statusText: { fontSize: FONT_SIZES.md, fontWeight: FONT_WEIGHT.bold_700 },
+  statusText: {
+     fontSize: FONT_SIZES.md, 
+    fontWeight: FONT_WEIGHT.bold_700
+   },
   mainCard: { marginBottom: SPACING.md },
   titleRow: {
     flexDirection: "row",
@@ -204,8 +207,14 @@ const styles = StyleSheet.create({
     letterSpacing: 0.8,
     marginBottom: SPACING.sm,
   },
-  desc: { fontSize: FONT_SIZES.md, color: COLORS.text, lineHeight: 24 },
-  metaCard: { marginBottom: SPACING.md },
+  desc: { 
+    fontSize: FONT_SIZES.md,
+     color: COLORS.text, 
+     lineHeight: 24 
+    },
+  metaCard: { 
+    marginBottom: SPACING.md
+   },
   metaRow: {
     flexDirection: "row",
     alignItems: "center",
@@ -214,21 +223,31 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: COLORS.border,
   },
-  metaLabel: { flex: 1, fontSize: FONT_SIZES.sm, color: COLORS.textSecondary },
+  metaLabel: { 
+    flex: 1,
+     fontSize: FONT_SIZES.sm,
+      color: COLORS.textSecondary
+     },
   metaValue: {
     fontSize: FONT_SIZES.sm,
     fontWeight: FONT_WEIGHT.bold_600,
     color: COLORS.text,
   },
   actions: { gap: SPACING.sm },
-  secondaryRow: { flexDirection: "row", gap: SPACING.sm },
+  secondaryRow: { 
+    flexDirection: "row", 
+    gap: SPACING.sm 
+  },
   notFound: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
     gap: SPACING.md,
   },
-  notFoundText: { fontSize: FONT_SIZES.lg, color: COLORS.textSecondary },
+  notFoundText: { 
+    fontSize: FONT_SIZES.lg,
+     color: COLORS.textSecondary
+     },
 });
 
 export default TaskDetailScreen;

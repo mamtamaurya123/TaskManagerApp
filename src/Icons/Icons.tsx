@@ -8,7 +8,7 @@ interface IconProps {
   color?: string;
 }
 
-// Icon Factory — creates typed icon components
+// creates typed icon components
 const createIcon = (name: keyof typeof Ionicons.glyphMap) => {
   const IconComponent: React.FC<IconProps> = ({
     size = 20,
@@ -17,7 +17,6 @@ const createIcon = (name: keyof typeof Ionicons.glyphMap) => {
   return IconComponent;
 };
 
-//Auth / Login Icons
 export const Icons = {
   // Login Screen
   User: createIcon("person-outline"),
